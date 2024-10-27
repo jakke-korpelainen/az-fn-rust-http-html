@@ -1,0 +1,16 @@
+{% extends "_base.html" %}
+
+<!-- Main -->
+
+{% block main %}
+  <main class="container mx-auto">
+    <h1>Blog Posts</h1>
+    <ul>
+      {% for post in posts %}
+      <li>
+        <a href="/posts/{{ post.slug }}">{{ post.title }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </main>
+{% endblock %}

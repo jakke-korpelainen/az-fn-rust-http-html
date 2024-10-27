@@ -1,0 +1,35 @@
+{% extends "_base.html" %}
+
+<!-- Main -->
+
+{% block main %}
+  {% match post %} 
+  {% when Some with (data) %}
+  <main class="container mx-auto">
+    <article>
+      <header>
+        <h1>{{ data.title }}</h1>
+      </header>
+      <section>
+        <div class="prose">{{ data.content }}</div>
+      </section>
+      <footer>
+        {% match data.tags %}
+        {% when Some with (tags) %}
+        <p>
+          Tags: 
+          {% for tag in tags %}
+            <span>{{ tag }}</span>
+          {% endfor %}
+        </p>
+        {% when None %}
+        {% endmatch %}
+        <a href="/posts">Back to posts</a>
+      </footer>
+    </article>
+  </main>
+  {% when None %}
+    <h1>Not Found</h1>
+    <p>Sorry, couldn't find that one!</p>
+  {% endmatch %}
+{% endblock %}
