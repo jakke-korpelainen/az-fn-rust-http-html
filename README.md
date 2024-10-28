@@ -43,7 +43,7 @@ pub struct BlogPost {
 }
 ```
 
-and be typed as `blogPost` in contentful. See [src\posts.rs](src\posts.rs) for more details.
+and be typed as `blogPost` in contentful. See [src/posts.rs](src/posts.rs) for more details.
 
 ### Running the cargo
 
