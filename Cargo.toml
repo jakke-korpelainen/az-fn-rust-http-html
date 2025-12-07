@@ -1,0 +1,13 @@
+[package]
+name = "handler"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1.40.0", features = ["full"] }
+reqwest = { version = "0.12.8", features = ["json"] }
+contentful = "0.8.0"
+serde = {version = "1.0.213", features = ["derive"]}
+axum = {version = "0.7.7", features = ["macros"]}
+askama = "0.12.1"
+tower-http = {version = "0.6.1", features = ["fs"]}
